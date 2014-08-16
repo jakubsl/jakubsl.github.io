@@ -1,0 +1,13 @@
+# Site settings
+title: Jakub Slaby
+email: kubo.slaby@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Personal website of Jakub Slaby, a front-end developer originally from Slovakia, currently living and working in London.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jakubsl
+github_username:  jakubsl
+
+# Build settings
+#markdown: kramdown
+markdown: redcarpet
