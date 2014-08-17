@@ -1,13 +1,11 @@
-<!--
 ---
 layout: page
-title: About
+title: about me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I am a very passionate Front-end Developer with love for HTML5, CSS, JavaScript and the countless number of its libraries. I enjoy developing user interfaces and I am really into usability, user experience and the psychology behind human-computer interaction.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I've graduated with a BSc[Hons] in Interactive Media Design at [Edinburgh Napier University](http://www.napier.ac.uk/) and I'm currently working as a developer for [Phantom](http://phantom.land) in London.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
--->
+Also, I am originally from Slovakia and I really enjoy coming back to my lovely hometown, Bratislava.
