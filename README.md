@@ -8,7 +8,7 @@ License
 =================
 The directories listed below and their contents are ©Jakub Slaby. Feel free to link to them but don't reuse them without my permission:
 
--_posts/
--examples/
+- You just **type naturally**, and the result looks good.
+- You **don't have to worry** about clicking formatting buttons.
 
 Everything else is MIT Licensed so feel free to use it as you please.
