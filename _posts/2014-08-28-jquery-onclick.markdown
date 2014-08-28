@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Assigning on-click event to an active or inactive state of an element"
+title:  "Assigning an on-click event to an active/inactive state of an element"
 date:   2014-08-28 12:44:35
 categories: javascript
 ---
@@ -27,7 +27,8 @@ $('#tabs li.active').on('click', function(e) {
 });
 {% endhighlight %}
 
-What happens though, is that the on-click event is assigned to the particular element and changing the class of the element doesn't change that. From suggestions on the internet I found out that you could unbind that event by using '.off()' but it seemed like an overkill to rebind the on-click event every time the element is clicked. I found out that this works really well and it might be of use to some of you:
+What happens though, is that the on-click event is assigned to the particular element and changing the class of the element doesn't change that. From suggestions on the internet I found out that you could unbind that event by using '.off()' but it seemed like an overkill to rebind the on-click event every time the element is clicked.
+I found out that this works really well and it might be of use to some of you:
 
 {% highlight javascript %}
 $('#tabs').on('click', 'li.inactive', function(e) {
