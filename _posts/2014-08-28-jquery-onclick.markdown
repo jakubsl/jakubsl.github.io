@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Assigning an on-click event to an active/inactive state of an element"
+title:  "Assigning a jQuery on-click event to an active/inactive state of an element"
 date:   2014-08-28 12:44:35
 categories: javascript
 ---
