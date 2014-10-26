@@ -49,14 +49,14 @@
     }
 
     function loadAudio(){
-        bgMusic = new Audio('media/the-first-light_Mike_Rowa.mp3');
+        bgMusic = new Audio('../media/the-first-light_Mike_Rowa.mp3');
         bgMusic.volume = 0.1;
         bgMusic.loop = true;
-        aSounds[0] = new Audio('media/snd1.wav');
+        aSounds[0] = new Audio('../media/snd1.wav');
         aSounds[0].volume = 0.1;
-        aSounds[1] = new Audio('media/snd2.wav');
+        aSounds[1] = new Audio('../media/snd2.wav');
         aSounds[1].volume = 0.1;
-        aSounds[2] = new Audio('media/snd3.wav');
+        aSounds[2] = new Audio('../media/snd3.wav');
         aSounds[2].volume = 0.1;
         bgMusic.play();
     }
