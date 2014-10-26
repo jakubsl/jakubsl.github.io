@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Development tools for mobile"
+title:  "development tools for mobile"
 date:   2014-08-23 17:02:16
 categories: webdev
 ---

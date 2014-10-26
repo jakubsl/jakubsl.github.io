@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "New site built with Jekyll"
+title:  "new site built with Jekyll"
 date:   2014-08-16 17:22:16
 categories: general
 ---
