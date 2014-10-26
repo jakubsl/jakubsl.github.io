@@ -1,0 +1,103 @@
+---
+layout: page
+title:  "arkanoidz"
+---
+
+<p>
+In this project, I was looking at casual games, trying to come up with a simple list of guidelines that could help game developers and game designers create better casual games.
+</p>
+<p>
+I went through lots of literature including Csikszentmihalyi's <a href="http://en.wikipedia.org/wiki/Flow_(psychology)" target="_blank"> Flow</a>, Juul's <a href="http://www.jesperjuul.net/casualrevolution/" target="_blank">Casual Revolution</a>, Harrigan's <a href="http://dl.acm.org/citation.cfm?id=1920796" target="_blank">research on slot machine gaming</a> and many many others.
+</p>
+<p>
+I also did lots of research on some of the most succesful casual games, such as Angry Birds, Candy Crush, Fruit Ninja or Doodle Jump. I was then able to come up with 7 guidelines which I believe can all significantly improve the experience of playing a casual game.
+</p>
+<p>
+These are:
+  <ul>
+    <li>Challenge</li>
+    <li>Representation</li>
+    <li>Simplicity</li>
+    <li>Feedback</li>
+    <li>Randomisation</li>
+    <li>Flexibility</li>
+    <li>Social Features</li>
+  </ul>
+</p>
+
+<h3>challenge</h3>
+<p>
+Every game needs to have a challenge, a problem to solve. It is the cognitive, not the physical challenge that can significantly improve the playing experience. Many games also include the element of competition, an opponent which could come in form of an artificial intelligence or real players. They could challenge each other or compete to rank higher in leader boards. Game designers should always strive to come up with the right balance between the game’s difficulty and the player’s skills, perhaps by incrementally increasing the difficulty over time. Many designers use time pressure to fully immerse the players in the game.
+</p>
+<h3>representation</h3>
+<p>
+Casual games should be set in positive, familiar settings and avoid offensive topics in order to attract as wide target audience as possible. In some games, using abstract, perhaps futuristic style can also work quite well, thus creating a visually minimalist environment. Auditory and visual elements should enhance the main theme of the game and make the game appealing to the players. All of the game elements should be clearly positioned in space in order to make them clear to understand, mainly if the game is intended to be played on mobile phones, where the screens are much smaller.
+</p>
+<h3>simplicity</h3>
+<p>
+Casual games should feature a shallow learning curve when it comes to their controls and mechanics and game designers should try to make them very intuitive and easy to get into. Many casual games could benefit from adapting the minimalist game design principles, using only the necessary mechanics, combining or automating in-game functions and stripping away the elements that do not have a meaningful contribution to the overall gameplay. In addition to that, even though a game’s back-end might be very complex, the complexity perceived by the player should be quite low.
+</p>
+<h3>feedback</h3>
+<p>
+Feedback is a crucial element of both casual game design and game design in general. It informs the player about his performance and progress, encourages certain behaviour and eventually leads to winning or losing. Positive feedback can make player feel in control and competent and can have a significant emotional impact on him. Game designers should ensure that their games produce clear and immediate feedback that could be visual, auditory or even physical (e.g. vibration). All casual games should include some form of reward and punishment features and could also benefit from the addition of ‘non-rewards’ such as near misses or losses disguised as wins.
+</p>
+<h3>randomisation</h3>
+<p>
+In order to make a game more interesting, increase the playing time and to make it more replayable, it is advised to use the element or randomisation. If game designers can prevent the player from performing exactly the same sequence of actions every time he replays a level, the playing experience can be much more enjoyable in long term. Researchers also recommend incorporating a degree of chance which player does not necessarily need to know about, since game designers can provide him with the illusion of control.
+</p>
+<h3>flexibility</h3>
+<p>
+When designing casual games, designers should be constantly aware of the fact that players may consider them a secondary activity, therefore players should be quickly turn them on and off, the game should automatically save player’s progress in case the game session gets interrupted. Casual games should accommodate both short and long playing sessions by either designing a number of small levels or having a simple checkpoint system. In addition to that, the player should be informed both about his current progress and the game level/checkpoint structure in order be able to assume how long will it take him to finish a certain part of the game or the game as a whole.
+</p>
+<h3>social features</h3>
+<p>
+Good casual games should allow social interactions between players, whether it is through in-game chat, leaderboards or sharing on social media. This can be directly related to the ‘challenge’ aspect, where players try to beat the scores of their friends in order to seek peer praise.
+</p>
+
+<h3>the actual experiment</h3>
+<p>
+In order to test these out I created a simple experiment. I chose an existing game concept, in this case it was <a href="http://en.wikipedia.org/wiki/Breakout_(video_game)" target="_blank">Breakout</a> and I tried to apply some of the guidelines on the bare bones version of this game. This resulted in 5 versions of this game being developed:
+<ul>
+  <li>
+  <a href="vanilla" target="_blank">'Vanilla'</a> was only the basic game concept, destroy all the bricks to win, only one life
+  </li>
+  <li>
+  <a href="challenge" target="_blank">'Challenge'</a> version which gradually increased its difficulty over time by increasing the speed of the ball. This version also included a leaderboards system.
+  </li>
+  <li>
+  <a href="representation" target="_blank">'Representation'</a> version which had nice colourful graphics, background music and feedback sounds
+  </li>
+  <li>
+  <a href="random" target="_blank">'Random'</a> version which had the bricks spread randomly across on the screen was meant to make the each game slightly different.
+  </li>
+  <li>
+  <a href="full" target="_blank">'Full'</a> version which combined all of the above.
+  </li>
+</ul>
+Feel free to try these out by clicking on the links above.
+</p>
+
+<p>
+I would then let people play these games (I managed to get more than 300 people to try them out) and track the way they played them using Google Analytics. People visited a certain link and they were randomly assigned to one of the 5 versions. This gave me an incredible amount of useful data, such as how much time did they spend playing the individual versions, how many times did they restart them, how many people shared these on Facebook etc.
+</p>
+
+<p>
+The results were fairly surprising:
+</p>
+<div class="center-div">
+  <img src="images/players-graph.png" alt="Number of players per individual version" width="500">
+  <img src="images/completed-graph.png" alt="Number of players who completed the game per version" class="top-margin" width="500">
+  <img src="images/restart-graph.png" alt="Number of restarts per version" class="top-margin" width="500">
+  <img src="images/share-graph.png" alt="Number of shares per version" class="top-margin bottom-margin" width="500">
+</div>
+<p>
+Surprisingly, the individual guidelines did not outperform the 'Vanilla' version on many of the occassions, however,the 'Full' version did surprisingly well. This lead to my conclusion that the guidelines might not be of much help when only one of them is applied, however, using a combination of them can significantly improve the gaming experience. Further reasearch would be needed to try out different combinations and also try the remaining guidelines.
+</p>
+<p>
+If you are interested in reading more about this, please feel free to check out the full report, where I go into a lot more detail:
+</p>
+<a href="report.pdf" target="_blank">full report</a>
+
+
+
+

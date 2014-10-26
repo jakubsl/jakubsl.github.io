@@ -1,0 +1,76 @@
+body{
+	background-color:black;
+	font-family:Verdana, Arial, sans-serif;
+	font-size:70%;
+}
+#wrapper{
+	width:860px;
+	margin:auto;
+}
+.canvas-container{
+	position:absolute !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
+	background-color:white;
+	
+}
+#myCanvas{
+	background:url('img/canvasbg.jpg');
+	background-color:white;
+}
+
+
+#imgButtons{
+	position:relative;
+	float:right;
+}
+
+#imgButtons .imgBtn{
+	opacity:0.8;
+  	filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+#imgButtons .imgBtn:hover{
+	opacity:1.0;
+  	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+#imgButtons .imgBtn:active{
+	opacity:0.5;
+  	filter:alpha(opacity=50); /* For IE8 and earlier */
+}
+#btns{
+	float:left;
+	position:relative;
+	margin-top:610px;
+}
+#drawingOptions{
+	color:white;
+	float:left;
+	position:relative;
+	margin-top:610px;
+	margin-left:20px;
+}
+.gecko #fd-slider-drawingLineWidth{
+	position:absolute;
+	display:inline;
+	margin-top:5px;
+	margin-left:5px;
+	width:120px;
+}
+.ie #drawingLineWidth{
+	width:150px;
+}
+
+.gecko #lineColor {
+  margin-left:140px;
+}
+
+
+.sp-replacer{
+	margin-left:10px !important;
+}
+#drawHere{
+	position:absolute;
+	margin-top:220px;
+	margin-left:280px;
+	pointer-events: none;
+}
