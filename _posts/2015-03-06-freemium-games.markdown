@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Is freemium killing the casual games industry?"
+title:  "is freemium killing the casual games industry?"
 date:   2015-03-06 22:51:35
 categories: games
 ---
