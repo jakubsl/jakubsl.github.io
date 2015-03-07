@@ -8,5 +8,9 @@ url: "http://jakubslaby.net" # the base hostname & protocol for your site
 twitter_username: jakubsl
 github_username:  jakubsl
 
+#Sitemap generation
+gems:
+  - jekyll-sitemap
+
 # Build settings
 markdown: kramdown
