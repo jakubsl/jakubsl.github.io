@@ -7,6 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jakubslaby.net" # the base hostname & protocol for your site
 twitter_username: jakubsl
 github_username:  jakubsl
+linkedin_username: slabyjakub
 
 #Sitemap generation
 gems:

@@ -188,15 +188,39 @@ pre {
 /**
  * Icons
  */
+
+.social-media-list {
+  margin-top: 20px;
+
+  li {
+      float: left;
+      margin-right: 15px;
+
+      &:last-child {
+          float: none;
+      }
+
+      a:hover span svg path {
+          fill: $brand-color;
+      }
+  }
+}
+
 .icon {
 
     > svg {
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: 25px;
+        height: 25px;
         vertical-align: middle;
 
         path {
+            fill: $grey-color;
+        }
+    }
+
+    &:hover {
+        svg path {
             fill: $grey-color;
         }
     }
