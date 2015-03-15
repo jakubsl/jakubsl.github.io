@@ -9,8 +9,8 @@ For the past few days I've been working on a small game idea I've got. I wanted 
 I tried to think of something that could combine the amazing minimalistic design from Dots with the challenge and difficulty provided by Super Hexagon.
 Something that would have really simple controls but would require very quick reactions in order to succeed.
 
-![My helpful screenshot]({{ site.url }}/assets/colors_sketch1.jpg =200x)
-![My helpful screenshot]({{ site.url }}/assets/colors_sketch2.jpg =200x)
+![My helpful screenshot]({{ site.url }}/assets/colors_sketch1.jpg)
+![My helpful screenshot]({{ site.url }}/assets/colors_sketch2.jpg)
 
 need to work on feedback for success failute
 background music
