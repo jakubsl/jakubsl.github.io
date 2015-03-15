@@ -16,7 +16,7 @@ I came up with the idea for Colors (working title), a simple game where you need
 
 As you can see, I was trying to find out what the ideal number of options might be, and 4 seemed a lot better mainly for mobile players using their thumbs.
 
-You can play the very first working prototype of the game [here](http://jakubslaby.net/colors/) or you can view the project [github page](https://github.com/jakubsl/colors).
+You can play the [very first working prototype of the game](http://jakubslaby.net/colors/) or you can view the project [github page](https://github.com/jakubsl/colors).
 
 There is still a lot of work to do though. One of the problems I noticed is that when a player chooses the correct color but the color which replaces it is exactly the same, to the player it seems like nothing changed and the controls just didn't react to his input. That is why I've now added feedback to successful attempt where a circle 'explodes' into small bubbles before being replaced by a new one. Now you have to wait until the animation finishes(0.5sec) before you can see the new designated colour which significantly slows down the game flow. I'll have to find a way to play the animation without making the player wait.
 
