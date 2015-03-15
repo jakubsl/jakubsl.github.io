@@ -11,5 +11,6 @@ The directories listed below and their contents are ©Jakub Slaby. Feel free to 
 - _posts
 - examples/
 - projects/
+- assets/
 
 Everything else is MIT Licensed so feel free to use it as you please.
