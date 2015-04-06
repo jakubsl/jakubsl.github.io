@@ -4,7 +4,7 @@ title:  "is freemium killing the casual games industry?"
 date:   2015-03-06 22:51:35
 categories: games
 ---
-*This post was originally published on [Phantom Blog](http://phantom.land/blog/freemium-killing-casual-games-industry/).*
+*This post was originally published on the [Phantom Blog](http://phantom.land/blog/freemium-killing-casual-games-industry/).*
 
 The other day I was looking through some stats on most successful mobile games, and noticed that of the top [100 highest grossing iOS games](http://appshopper.com/bestsellers/games/gros/?device=iphone), 97 are being offered for free.
 
