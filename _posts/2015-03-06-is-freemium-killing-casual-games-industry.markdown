@@ -4,6 +4,8 @@ title:  "is freemium killing the casual games industry?"
 date:   2015-03-06 22:51:35
 categories: games
 ---
+*This post was originally published on [Phantom Blog](http://phantom.land/blog/freemium-killing-casual-games-industry/).*
+
 The other day I was looking through some stats on most successful mobile games, and noticed that of the top [100 highest grossing iOS games](http://appshopper.com/bestsellers/games/gros/?device=iphone), 97 are being offered for free.
 
 It gets even scarier when you look at the actual numbers stating how much these games are actually earning. Clash of Clans, a game that has been on top for quite some time now [is earning more than $1.5 million a day](https://thinkgaming.com/app-sales-data/), and that’s only on iOS. Another studio producing high grossing games, King, with their Candy Crush/Candy Crush Saga/Farm Heroes Saga is earning almost $2.5 million a day with all of these combined.
