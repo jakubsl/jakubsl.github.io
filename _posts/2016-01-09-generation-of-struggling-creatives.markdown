@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Troubles of a struggling creative"
+title:  "troubles of a struggling creative"
 date:   2016-01-09 20:52:13
 categories: general
 ---
