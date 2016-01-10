@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "troubles of a struggling creative"
-date:   2016-01-09 20:52:13
+date:   2016-01-10 20:52:13
 categories: general
 ---
 So, it's 2016 now and I want to finally start building my own sh*t. To build a game of my own, to create a kick-ass app/product, to finally start writing on my blog frequently. To learn about all the cool new tools I should definitely know about, the pre-processors, the post-processors, the frameworks, the cool new libraries. I keep telling that to myself every year, but somehow I always seem to fail in the end.
