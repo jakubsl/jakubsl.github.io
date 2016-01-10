@@ -3,211 +3,25 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-    
-    <script src="libs/fabric.js"></script>
+    <script src="js/libs/fabric.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-    <script src="libs/export_canvas/base64.js" type="text/javascript"></script>
-    <script src="libs/export_canvas/canvas2image.js" type="text/javascript"></script>
+    <script src="js/libs/export_canvas/base64.js" type="text/javascript"></script>
+    <script src="js/libs/export_canvas/canvas2image.js" type="text/javascript"></script>
 
     <!-- libraries used for making the color picker work in other browsers, since the native html feature 
     is currently only supported by chrome and opera -->
-    <script src='libs/color_picker/spectrum.js'></script>
-    <link rel='stylesheet' href='libs/color_picker/spectrum.css' />
-    <script src='libs/css_browser_selector.js'></script>
-
+    <script src='js/libs/color_picker/spectrum.js'></script>
+    <link rel='stylesheet' href='js/libs/color_picker/spectrum.css' />
+    <script src='js/libs/css_browser_selector.js'></script>
     <!-- library used to make the input type range work in other browsers-->
-    <script src="libs/slider/modernizr-custom.js"></script>
+    <script src="js/libs/slider/modernizr-custom.js"></script>
     <!-- Modernizr checks if browser supports input type range and input type color-->
-    <script>   
-        // Set up the yepnope (Modernizr.load) directives... 
-        Modernizr.load([
-        {
-            // Test if Input Range is supported using Modernizr
-            test: Modernizr.inputtypes.range,
-            // If ranges are not supported, load the slider script and CSS file
-            nope: [     
-                // The slider CSS file
-                'libs/slider/fd-slider.mhtml.min.css',   
-                // The slider JS file
-                'libs/slider/fd-slider.js'     
-            ],
-            callback: function(id, testResult) {
-                // If the slider file has loaded then fire the onDomReady event        
-                if("fdSlider" in window && typeof (fdSlider.onDomReady) != "undefined") {
-                    try { fdSlider.onDomReady(); } catch(err) {};
-                };
-            }
-        }
-        ]);
-    </script>
-
-
   </head>
-  <script>
-    var canvas;
-    var canvasScreenShot; //for exporting .png
-    var imgLoader;
-      function init() {
-   
-        canvas = new fabric.Canvas('myCanvas');
-        canvasScreenShot = document.getElementById("myCanvas");
-        drawingMode();
-        
-        canvas.contextContainer.strokeStyle = '#555';
-
-        //to make the input color change without having to click confirm
-        $("#drawingColor").spectrum({
-        clickoutFiresChange: true
-        });
-        //addOwnImage();
-      };
-
-
-       function addSVG(src){
-          fabric.loadSVGFromURL(src ,function(objects, options) {
-
-          var shape = fabric.util.groupSVGElements(objects, options);
-          canvas.add(shape.scale(0.5));
-          shape.set({ left: 100, top: 100 }).setCoords();
-          canvas.renderAll();
-        });
-       }
-
-       function addImage(src){
-        fabric.Image.fromURL(src, function(img){
-          img.scale(0.5);
-          img.set({ left: 100, top: 100 }).setCoords();
-          canvas.add(img).setActiveObject(img);
-          canvas.renderAll();
-        })
-       }
-
-       function drawingMode(){
-        var drawingMode = document.getElementById('drawingMode');
-        var drawingOptions = document.getElementById('drawingOptions');
-        var drawingColor = document.getElementById('drawingColor');
-        var drawingLineWidth = document.getElementById('drawingLineWidth');
-        console.log(drawingColor.value);
-
-        canvas.freeDrawingColor = drawingColor.value;
-        canvas.freeDrawingLineWidth = parseInt(drawingLineWidth.value, 10) || 1;
-
-        if(canvas.isDrawingMode == true){
-          canvas.isDrawingMode = false;
-          drawingOptions.style.display = 'none';
-          drawingMode.innerHTML = 'Enter drawing mode';
-        }else {
-          canvas.isDrawingMode = true;
-          console.log(canvas.defaultCursor);
-          drawingOptions.style.display = '';
-           //to make the slider work in browsers not supporting input type range
-           if("fdSlider" in window && typeof (fdSlider.onDomReady) != "undefined") {
-                    fdSlider.redrawAll();
-                };
-           drawingMode.innerHTML = 'Cancel drawing mode';
-        }
-            drawingColor.onchange = function() {
-              canvas.freeDrawingColor = drawingColor.value;
-            };
-            drawingLineWidth.onchange = function() {
-              canvas.freeDrawingLineWidth = parseInt(drawingLineWidth.value, 10) || 1;
-              console.log(drawingLineWidth.value);
-            };
-       }
-       function removeObject() {
-          var activeObject = canvas.getActiveObject(),
-              activeGroup = canvas.getActiveGroup();
-          if (activeObject) {
-            canvas.remove(activeObject);
-          }
-          else if (activeGroup) {
-            var objectsInGroup = activeGroup.getObjects();
-            canvas.discardActiveGroup();
-            objectsInGroup.forEach(function(object) {
-              canvas.remove(object);
-            });
-          }
-        };
-       function exportAndSaveCanvas()  {
-          context=canvasScreenShot.getContext("2d");
-          context.globalCompositeOperation="destination-over";
-          var backgroundImage =new Image();
-          backgroundImage.src = 'img/canvasbg.jpg';
-          context.drawImage(backgroundImage,0,0);
-          var data = canvasScreenShot.toDataURL('image/jpeg',1.0);
-
-          //link to a separate php file necessary in order to be able to add filetype and extension to saved image
-          saver = new saveImg('libs/export_canvas/saveImage.php')
-
-          //function for saving images from a data string
-          function saveImg(url){
-            this.url = url;
-             
-            this.saveJPG = function(showImage, fname) {
-                if(!data || !url) return;
-                fname = fname || 'picture';
-                 
-                data = data.substr(data.indexOf(',') + 1).toString();
-                 
-                var dataInput = document.createElement("input") ;
-                dataInput.setAttribute("name", 'imgdata') ;
-                dataInput.setAttribute("value", data);
-                 
-                var nameInput = document.createElement("input") ;
-                nameInput.setAttribute("name", 'name') ;
-                nameInput.setAttribute("value", fname + '.jpg');
-                 
-                var myForm = document.createElement("form");
-                myForm.method = 'post';
-                myForm.action = url;
-                myForm.appendChild(dataInput);
-                myForm.appendChild(nameInput);
-                 
-                document.body.appendChild(myForm) ;
-                myForm.submit() ;
-                document.body.removeChild(myForm) ;
-            };
-             
-          }
-           saver.saveJPG(data,'myImage')
-        }
-        
-       function addOwnImage(){
-          imgLoader = document.getElementById("imgLoader");
-            imgLoader.onchange = function handleImage(e){
-                var reader = new FileReader();
-                reader.onload = function(event){
-                    var imgObj = new Image();
-                    imgObj.src = event.target.result;
-                    //fabric js stuff
-                    imgObj.onload = function(){
-                      var image = new fabric.Image(imgObj);
-                      image.set({
-                        left:250,
-                        top:250,
-                      });
-                      image.scaleToWidth(100);
-                      canvas.add(image);
-                    }
-                }
-                reader.readAsDataURL(e.target.files[0]);
-              }
-        }
-        var drawHereExists = true;
-        if(drawHereExists == true){
-           $('html').mousedown(function() {
-                      drawhereExists = false;                 
-                      var drawHere = document.getElementById('drawHere');
-                      drawHere.style.display = 'none';
-            }); 
-        }   
-    </script>
+  <script src='js/main.js'></script>
   <body onload="init();">
     <div id="wrapper">
     <canvas id="myCanvas" width="800" height="600" style="margin:auto"></canvas>
     <img id="drawHere" src="img/draw_here.png"/>
-    
     <div id="imgButtons">
     <div id="cartman" class="imgBtn"><img id="cartman" src="img/cartman.svg" alt="cartman" height="50" width="50" onClick="addSVG(src);"></div>
     <div id="kenny" class="imgBtn"><img id="kenny" src="img/kenny.svg" alt="kenny" height="50" width="50" onClick="addSVG(src);"></div>
@@ -220,7 +34,8 @@
     <button type="button" class="btn" id="drawingMode" onClick="drawingMode();">Cancel Drawing Mode</button>
     <button type="button" class="btn" id="removeObject" onClick="removeObject();">Remove object</button>
     <button type="button" class="btn" onClick="canvas.clear();" id="clearButton">Clear canvas</button>
-    <button type="button" class="btn" onClick="exportAndSaveCanvas();" id="exportButton">Export</button>
+<!--     <button type="button" class="btn" id="exportButton">Export</button> -->
+<a id="exportButton" class="btn" onclick="$('#exportButton').attr('href', myCanvas.toDataURL());" download="canvas-drawing.png" href="#" target="_blank">Download</a>
     <!--<input type="file" id="imgLoader">-->
     </div>
       <div style="display:none;" id="drawingOptions">

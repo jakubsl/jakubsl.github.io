@@ -1,9 +1,9 @@
 <header class="site-header">
-
   <div class="wrapper">
-
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
+    <div class="headline">
+      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      {% if site.headline %}<h1 class="site-headline">{{ site.headline }} with love for {{page.headline}}.</h1>{% endif %}
+    </div>
     <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">
@@ -14,15 +14,16 @@
       </a>
 
       <div class="trigger">
+        {% assign current_url = page.url|remove:'index.html' %}
+              <a class="page-link {% if current_url == "/" %}active{% endif %}" href="{{ site.baseurl }}/">blog</a>
         {% assign pages = site.pages | sort: "order" %}
         {% for page in pages %}
           {% if page.title and page.menu == "main" %}
-              <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% assign url = page.url|remove:'index.html' %}
+              <a class="page-link {% if current_url == url %}active{% endif %}" href="{{ url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
       </div>
     </nav>
-
   </div>
-
 </header>

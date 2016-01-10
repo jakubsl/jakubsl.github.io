@@ -1,0 +1,117 @@
+.avocados {
+  .site-header {
+    background: $brand_color-avocados;
+
+    .headline {
+      .site-headline {
+        color: $text-color_light;
+      }
+    }
+
+    .site-title {
+      &,
+      &:visited {
+        color: $text-color_light;
+      }
+    }
+
+    .site-nav {
+      .page-link {
+        color: $text-color_light;
+      }
+    }
+  }
+
+  a {
+    color: $brand_color-avocados;
+  }
+}
+
+.blueberries {
+  .site-header {
+    background: $brand_color-blueberries;
+
+    .headline {
+      .site-headline {
+        color: $text-color_light;
+      }
+    }
+
+    .site-title {
+      &,
+      &:visited {
+        color: $text-color_light;
+      }
+    }
+    .site-nav {
+      .page-link {
+        color: $text-color_light;
+      }
+      .page-link.active {
+        color: $text-color_dark;
+      }
+    }
+  }
+
+  a {
+    color: $brand_color-blueberries;
+  }
+
+  .social-media-list li a:hover span svg path {
+    fill: #27ACE3;
+  }
+}
+
+.papayas {
+  .site-header {
+    background: $brand_color-papayas;
+
+    .headline {
+      .site-headline {
+        color: $text-color_light;
+      }
+    }
+
+    .site-title {
+      &,
+      &:visited {
+        color: $text-color_light;
+      }
+    }
+    .site-nav {
+      .page-link {
+        color: $text-color_light;
+      }
+    }
+  }
+  a {
+    color: $brand_color-papayas;
+  }
+}
+
+.cheese {
+  .site-header {
+    background: $brand_color-cheese;
+
+    .headline {
+      .site-headline {
+        color: $text-color_dark;
+      }
+    }
+
+    .site-title {
+      &,
+      &:visited {
+        color: $text-color_dark;
+      }
+    }
+    .site-nav {
+      .page-link {
+        color: $text-color_dark;
+      }
+    }
+  }
+  a {
+    color: $brand_color-cheese;
+  }
+}

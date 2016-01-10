@@ -1,0 +1,23 @@
+---
+# Front matter comment make sure Jekyll converts this to css.
+---
+.site-header {
+  max-height: 90px;
+
+  .headline {
+    .site-headline {
+      display: block;
+    }
+  }
+  &.nav-shrink {
+    max-height: 56px;
+    .headline {
+      max-height: 56px;
+    }
+  }
+}
+
+.page-content {
+  min-height: 700px;
+  padding-top: 120px;
+}

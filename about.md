@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: about
 menu: main
-order: 2
+order: 4
 permalink: /about/
-title: about me
+title: about
 ---
 
 I am a very passionate Front-end Developer with love for HTML5, CSS, JavaScript and the countless number of its libraries. I enjoy developing user interfaces and I am really into usability, user experience and the psychology behind human-computer interaction.
