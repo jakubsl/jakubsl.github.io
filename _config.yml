@@ -14,7 +14,27 @@ gems:
   - jekyll-sitemap
 
 # Build settings
+highlighter : pygments
 markdown: kramdown
 
 # Permalink structure for blog posts
 permalink: /blog/:title/
+
+destination: _site
+sass:
+  sass_dir: _sass
+  style: expanded # compressed # expanded
+
+# Author settings
+author:
+  name      : Jakub Slaby
+  job       : Frontend Developer
+  email     : kubo.slaby@gmail.com
+  url       : http://jakubslaby.net
+  github    : http://github.com/jakubsl
+  twitter   : http://twitter.com/jakubsl
+  linkedin  : http://linkedin.com/in/slabyjakub
+
+google_analytics: UA-60492169-1
+repo: https://github.com/jakubsl/jakubsl.github.io
+
