@@ -18,7 +18,7 @@ highlighter : pygments
 markdown: kramdown
 
 # Permalink structure for blog posts
-permalink: /blog/:title/
+permalink: /blog/:categories/:title/
 
 destination: _site
 sass:
